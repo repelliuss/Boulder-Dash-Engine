@@ -55,7 +55,7 @@ int update_game(Game *const game) {
 
 	while(game->is_running && !game->end) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events(game);
 
@@ -99,7 +99,7 @@ int update_game(Game *const game) {
 			decrease_time(&game->time.delta_time, 0.01);
 		}
 
-		clock_gettime(CLOCK_MONOTONIC, &game->time.timer_stop);
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 
@@ -180,7 +180,7 @@ void init_game_time(GameTime *const time) {
 	time->delta_time = 0.0;
 }
 
-void init_input(Input *const input, struct timespec *timer_start) {
+void init_input(Input *const input, Uint64 *timer_start) {
 
 	input->key = KEY_NONE;
 	init_keyboard(&(input->keyboard), timer_start);
@@ -330,7 +330,7 @@ double get_resultant_speed(const TileSet tile, const Game *const game) {
 	return resultant_speed;
 }
 
-double get_delta_time(const struct timespec *const timer_start, const struct timespec *const timer_stop) {
+double get_delta_time(const Uint64 *const timer_start, const Uint64 *const timer_stop) {
 
 	double delta_time = 0.0;
 		

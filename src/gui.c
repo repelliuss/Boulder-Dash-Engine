@@ -629,7 +629,7 @@ bool open_start_screen(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -671,7 +671,7 @@ bool open_start_screen(Game *const game) {
 			handle_fade_timer(&(game->video.effects.fade), game->time.delta_time);
 		}
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 
@@ -697,7 +697,7 @@ bool open_new_game_screen(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -755,7 +755,7 @@ bool open_new_game_screen(Game *const game) {
 
 		handle_keyboard_time(&(game->input.keyboard), game->time.delta_time);
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 
@@ -799,7 +799,7 @@ bool open_game_mode_screen(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -876,7 +876,7 @@ bool open_game_mode_screen(Game *const game) {
 
 		handle_keyboard_time(&(game->input.keyboard), game->time.delta_time);
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 
@@ -950,7 +950,7 @@ bool open_level_screen(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -1050,7 +1050,7 @@ bool open_level_screen(Game *const game) {
 			handle_fade_timer(&(game->video.effects.fade), game->time.delta_time);
 		}
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 
@@ -1103,15 +1103,15 @@ void update_level_screen_ids(SDL_Renderer *renderer, const int place_character_l
 
 double handle_menu(Game *const game) {
 
-	struct timespec timer_start, timer_stop;
+	Uint64 timer_start, timer_stop;
 	double pause_time = 0.0;
 
-	clock_gettime(CLOCK_MONOTONIC, &timer_start);
-	
+	timer_start = SDL_GetPerformanceCounter();
+
 	open_menu(game);
-	
-	clock_gettime(CLOCK_MONOTONIC, &timer_stop);
-	
+
+	timer_stop = SDL_GetPerformanceCounter();
+
 	pause_time = get_time_seconds(&timer_start, &timer_stop);
 
 	return pause_time;
@@ -1128,7 +1128,7 @@ void open_menu(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -1208,7 +1208,7 @@ void open_menu(Game *const game) {
 
 		handle_keyboard_time(&(game->input.keyboard), game->time.delta_time);
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 }
@@ -1272,7 +1272,7 @@ bool open_are_you_sure(Game *const game, SDL_Texture *texture_warning, SDL_Rect 
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -1328,7 +1328,7 @@ bool open_are_you_sure(Game *const game, SDL_Texture *texture_warning, SDL_Rect 
 
 		handle_keyboard_time(&(game->input.keyboard), game->time.delta_time);
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 
@@ -1376,7 +1376,7 @@ void open_settings(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -1493,7 +1493,7 @@ void open_settings(Game *const game) {
 
 		handle_keyboard_time(&(game->input.keyboard), game->time.delta_time);
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 }
@@ -1786,7 +1786,7 @@ void open_volume_settings(Game *const game) {
 
 	while(quit_loop == FALSE && game->is_running) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -1887,7 +1887,7 @@ void open_volume_settings(Game *const game) {
 
 		handle_keyboard_time(&(game->input.keyboard), game->time.delta_time);
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 }

@@ -50,7 +50,7 @@ void init_textures(SDL_Texture **textures, const int size) {
 	}
 }
 
-void init_fade(Fade *const fade, struct timespec *timer_start) {
+void init_fade(Fade *const fade, Uint64 *timer_start) {
 
 	fade->time = 0.0;
 	fade->last_time = 0.0;
@@ -615,11 +615,11 @@ void render_game(Game *const game) {
 /*fade time, fade state, fade full cycle should be already handled to work properly*/
 void handle_fade(Fade *const fade, SDL_Texture **textures, const int count) {
 
-	struct timespec timer_current;
+	Uint64 timer_current;
 	double rate;
 	double alpha;
 
-	clock_gettime(CLOCK_MONOTONIC, &timer_current);
+	timer_current = SDL_GetPerformanceCounter();
 	fade->last_time = get_time_seconds(fade->timer_start, &timer_current);
 	fade->time += fade->last_time;
 
@@ -970,7 +970,7 @@ void show_text_timed_screen(Game *const game, SDL_Texture *texture, SDL_Rect *re
 
 	while(current_time < time) {
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_start));
+		game->time.timer_start = SDL_GetPerformanceCounter();
 
 		do_events_gui(game);
 
@@ -982,7 +982,7 @@ void show_text_timed_screen(Game *const game, SDL_Texture *texture, SDL_Rect *re
 
 		current_time += game->time.delta_time;
 
-		clock_gettime(CLOCK_MONOTONIC, &(game->time.timer_stop));
+		game->time.timer_stop = SDL_GetPerformanceCounter();
 		game->time.delta_time = get_delta_time(&game->time.timer_start, &game->time.timer_stop);
 	}
 }

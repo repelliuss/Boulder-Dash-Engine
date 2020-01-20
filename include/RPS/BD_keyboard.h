@@ -20,12 +20,12 @@
 		double time;
 		double last_time;
 		double key_delay;
-		struct timespec *timer_start;
+		Uint64 *timer_start;
 		bool get_key;
 	}Keyboard;
 
 	void reset_key(Key *const key);
 	bool is_pressed(Keyboard *const keyboard, const Key key);
-	void init_keyboard(Keyboard *const keyboard, struct timespec *const timer_start);
+	void init_keyboard(Keyboard *const keyboard, Uint64 *const timer_start);
 	
 #endif

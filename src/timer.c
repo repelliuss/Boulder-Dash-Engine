@@ -1,18 +1,12 @@
 #include <RPS/BD.h>
 
-void init_timer(struct timespec *const timer) {
-
-	timer->tv_sec = 0;
-	timer->tv_nsec = 0.0;
-}
-
-double get_last_time(StackMovables *root_water, const struct timespec *const timer_start) {
+double get_last_time(StackMovables *root_water, const Uint64 *const timer_start) {
 	
 	double time = 0.0;
-	struct timespec timer_current;
+	Uint64 timer_current;
 
 	if(root_water == NULL) {
-		clock_gettime(CLOCK_MONOTONIC, &timer_current);
+		timer_current = SDL_GetPerformanceCounter();
 		time = get_time_seconds(timer_start, &timer_current);
 	}
 	else {
@@ -22,12 +16,12 @@ double get_last_time(StackMovables *root_water, const struct timespec *const tim
 	return time;
 }
 
-double get_time_seconds(const struct timespec *const timer_start, const struct timespec *const timer_stop) {
+double get_time_seconds(const Uint64 *const timer_start, const Uint64 *const timer_stop) {
 
 	double delta_time = 0.0;
 
-	delta_time = ((timer_stop->tv_sec - timer_start->tv_sec) * 1000000) + (timer_stop->tv_nsec - timer_start->tv_nsec) / 1000;
-	delta_time /= 1000000;
+	delta_time = (double)((*timer_stop - *timer_start) * 1000) / SDL_GetPerformanceFrequency();
+	delta_time /= 1000;
 
 	return delta_time;
 }

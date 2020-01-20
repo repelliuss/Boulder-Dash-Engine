@@ -86,7 +86,7 @@ void handle_player_movement(Movement *const movement_player) {
 void handle_keyboard(Keyboard *const keyboard) {
 
 	const Uint8 *keystates = SDL_GetKeyboardState(NULL);		/*Uint8 and other different sized integers that uses typedef is declared in SDL*/
-	struct timespec timer_current;	
+	Uint64 timer_current;
 
 	if(keyboard->get_key == TRUE) {
 
@@ -137,7 +137,7 @@ void handle_keyboard(Keyboard *const keyboard) {
 
 	if(keyboard->get_key == FALSE) {
 
-		clock_gettime(CLOCK_MONOTONIC, &timer_current);
+		timer_current = SDL_GetPerformanceCounter();
 		keyboard->last_time = get_time_seconds(keyboard->timer_start, &timer_current);
 		keyboard->time += keyboard->last_time;
 	}

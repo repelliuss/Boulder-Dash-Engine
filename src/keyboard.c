@@ -1,6 +1,6 @@
 #include <RPS/BD.h>
 
-void init_keyboard(Keyboard *const keyboard, struct timespec *const timer_start) {
+void init_keyboard(Keyboard *const keyboard, Uint64 *const timer_start) {
 
 	keyboard->key = KEY_NONE;
 	keyboard->time = 0.0;

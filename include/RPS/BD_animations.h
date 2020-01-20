@@ -85,20 +85,20 @@
 
 	void free_anim_stack(StackMovables **root);
 	void go_next_frame(int *const frame, double *const frame_time,
-						const int total_frame, const double next_frame_time, const struct timespec *const timer_start);
+						const int total_frame, const double next_frame_time, const Uint64 *const timer_start);
 	void find_frame(SDL_Rect *const src_rect, const int frame, const int first_frame);
-	void late_update_background(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
-	void late_update_dirt(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
-	void late_update_gate(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
-	void late_update_stars(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
-	void late_update_little_diamonds(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
+	void late_update_background(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
+	void late_update_dirt(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
+	void late_update_gate(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
+	void late_update_stars(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
+	void late_update_little_diamonds(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
 	void late_update_monsters(StackMovables *root, TileMap **const map, const TileMapInfo *const info_map,
-								const SFX *const sfx, const Uint8 vol, Player *const player, const struct timespec *const timer_start);
+								const SFX *const sfx, const Uint8 vol, Player *const player, const Uint64 *const timer_start);
 	void late_update_spiders(StackMovables *root, TileMap **const map, const TileMapInfo *const info_map,
-								const SFX *const sfx, const Uint8 vol, Player *const player, const struct timespec *const timer_start);
-	void late_update_converter(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
-	void late_update_diamonds(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
-	void late_update_stones(StackMovables *root, TileMap **const map, const struct timespec *const timer_start);
+								const SFX *const sfx, const Uint8 vol, Player *const player, const Uint64 *const timer_start);
+	void late_update_converter(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
+	void late_update_diamonds(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
+	void late_update_stones(StackMovables *root, TileMap **const map, const Uint64 *const timer_start);
 	void late_update_character(StackMovables *root, Game *const game);
 	void late_update_map(Game *const game);
 	void reset_frame(Anim *const anim);

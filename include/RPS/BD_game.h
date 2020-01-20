@@ -35,8 +35,8 @@
 
 	typedef struct gameTime {
 		double delta_time;
-		struct timespec timer_start;
-		struct timespec timer_stop;
+		Uint64 timer_start;
+		Uint64 timer_stop;
 	}GameTime;
 
 	typedef struct map {
@@ -112,14 +112,14 @@
 
 	void free_game(Game **game);
 	void fix_delta_time(double *const delta_time);
-	double get_delta_time(const struct timespec *const timer_start, const struct timespec *const timer_stop);
+	double get_delta_time(const Uint64 *const timer_start, const Uint64 *const timer_stop);
 	double get_resultant_speed(const TileSet tile, const Game *const game);
 	void handle_window_mode(Game *const game);
 	void handle_dev_mode(Game *const game);
 	void handle_fps(FPS *const fps, GameTime *const time);
 	void handle_settings(Game *const game);
 	void handle_game_mode(Game *const game);
-	void init_input(Input *const input, struct timespec *timer_start);
+	void init_input(Input *const input, Uint64 *timer_start);
 	void init_game_time(GameTime *const time);
 	void init_player(Player *const player);
 	void init_speed(Speed *const speed);

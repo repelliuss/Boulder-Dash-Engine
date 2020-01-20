@@ -195,7 +195,7 @@ void update_static_water(StackMovables *root, Game *const game) {
 	}
 }
 
-void update_water(StackMovables *root, TileMap **const map, Level *const level, const struct timespec *const timer_start) {
+void update_water(StackMovables *root, TileMap **const map, Level *const level, const Uint64 *const timer_start) {
 	
 	level->water.time -= level->water.last_time;
 	level->water.last_time = get_last_time(root, timer_start);

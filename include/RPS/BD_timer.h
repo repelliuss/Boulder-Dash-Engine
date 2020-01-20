@@ -18,8 +18,7 @@
 	void decrease_time(double *const target, const double value);
 	void handle_keyboard_time(Keyboard *const keyboard, const double delta_time);
 	void handle_water_time(Water *const water, const double delta_time);
-	double get_time_seconds(const struct timespec *const start, const struct timespec *const stop);
-	double get_last_time(StackMovables *root_water, const struct timespec *const timer_start);
-	void init_timer(struct timespec *const timer);
+	double get_time_seconds(const Uint64 *const start, const Uint64 *const stop);
+	double get_last_time(StackMovables *root_water, const Uint64 *const timer_start);
 
 #endif

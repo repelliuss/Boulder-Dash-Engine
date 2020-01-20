@@ -202,7 +202,7 @@
 		Uint8 alpha;
 		FadeState state;
 		bool full_cycle;
-		struct timespec *timer_start;
+		Uint64 *timer_start;
 	}Fade;
 
 	typedef struct effects {
@@ -246,7 +246,7 @@
 	void load_textures_hud_fonts(Game *const game);
 	void load_textures_map(SDL_Texture **textures_map, SDL_Renderer *renderer, const Level *const level);
 	void load_textures(Game *const game);
-	void init_fade(Fade *const fade, struct timespec *timer_start);
+	void init_fade(Fade *const fade, Uint64 *timer_start);
 	void init_textures(SDL_Texture **textures, const int size);
 	void get_window_size(SDL_Window *const window, WindowInfo *const info_window);
 	SDL_Renderer* build_renderer(SDL_Window *window);

@@ -83,7 +83,7 @@
 	void update_converter(StackMovables *root, Game *const game);
 	void update_solids(StackMovables *root, Game *const game);
 	void update_static_water(StackMovables *root, Game *const game);
-	void update_water(StackMovables *root, TileMap **const map, Level *const level, const struct timespec *const timer_start);
+	void update_water(StackMovables *root, TileMap **const map, Level *const level, const Uint64 *const timer_start);
 	void update_map(Game *const game);
 	TileMap** load_map(TileMapInfo *const info_map, const LevelID levelID, int *const total_diamonds);
 

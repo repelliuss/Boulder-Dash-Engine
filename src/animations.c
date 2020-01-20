@@ -279,7 +279,7 @@ void late_update_character(StackMovables *root, Game *const game) {
 	}
 }
 
-void late_update_stones(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_stones(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 		if(map[root->y_pos][root->x_pos].is_dead == FALSE) {
@@ -302,7 +302,7 @@ void late_update_stones(StackMovables *root, TileMap **const map, const struct t
 	}
 }
 
-void late_update_diamonds(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_diamonds(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 		if(map[root->y_pos][root->x_pos].is_dead == FALSE) {
@@ -324,7 +324,7 @@ void late_update_diamonds(StackMovables *root, TileMap **const map, const struct
 	}
 }
 
-void late_update_converter(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_converter(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 		
@@ -338,7 +338,7 @@ void late_update_converter(StackMovables *root, TileMap **const map, const struc
 }
 
 void late_update_spiders(StackMovables *root, TileMap **const map, const TileMapInfo *const info_map,
-								const SFX *const sfx, const Uint8 vol, Player *const player, const struct timespec *const timer_start) {
+								const SFX *const sfx, const Uint8 vol, Player *const player, const Uint64 *const timer_start) {
 
 	int y_move, x_move;
 
@@ -379,7 +379,7 @@ void late_update_spiders(StackMovables *root, TileMap **const map, const TileMap
 }
 
 void late_update_monsters(StackMovables *root, TileMap **const map, const TileMapInfo *const info_map,
-								const SFX *const sfx, const Uint8 vol, Player *const player, const struct timespec *const timer_start) {
+								const SFX *const sfx, const Uint8 vol, Player *const player, const Uint64 *const timer_start) {
 
 	int y_move, x_move;
 
@@ -453,7 +453,7 @@ void late_update_monsters(StackMovables *root, TileMap **const map, const TileMa
 	}
 }
 
-void late_update_little_diamonds(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_little_diamonds(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 		if(map[root->y_pos][root->x_pos].is_dead == FALSE) {
@@ -474,7 +474,7 @@ void late_update_little_diamonds(StackMovables *root, TileMap **const map, const
 	}
 }
 
-void late_update_stars(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_stars(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 		if(map[root->y_pos][root->x_pos].is_dead == FALSE) {
@@ -488,7 +488,7 @@ void late_update_stars(StackMovables *root, TileMap **const map, const struct ti
 	}
 }
 
-void late_update_gate(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_gate(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 		if(map[root->y_pos][root->x_pos].is_dead == FALSE) {
@@ -505,7 +505,7 @@ void late_update_gate(StackMovables *root, TileMap **const map, const struct tim
 	}
 }
 
-void late_update_background(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_background(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 
@@ -519,7 +519,7 @@ void late_update_background(StackMovables *root, TileMap **const map, const stru
 	}
 }
 
-void late_update_dirt(StackMovables *root, TileMap **const map, const struct timespec *const timer_start) {
+void late_update_dirt(StackMovables *root, TileMap **const map, const Uint64 *const timer_start) {
 
 	while(root != NULL) {
 
@@ -542,11 +542,11 @@ void find_frame(SDL_Rect *const src_rect, const int frame, const int first_frame
 }
 
 void go_next_frame(int *const frame, double *const frame_time,
-					const int total_frame, const double next_frame_time, const struct timespec *const timer_start) {
+					const int total_frame, const double next_frame_time, const Uint64 *const timer_start) {
 
-	struct timespec timer_current;
-	
-	clock_gettime(CLOCK_MONOTONIC, &timer_current);
+	Uint64 timer_current;
+
+	timer_current = SDL_GetPerformanceCounter();
 
 	*frame_time += get_time_seconds(timer_start, &timer_current);
 

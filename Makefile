@@ -28,9 +28,13 @@ EXEC := BoulderDash
 $(EXEC): $(OBJS)
 	$(CC) -o $@ $(OBJS) $(LDFLAGS)
 
-$(BUILDDIR)%.o: $(SRCDIR)%.c
+$(BUILDDIR)%.o: $(SRCDIR)%.c dir
 	$(CC) -c $(CFLAGS)  $< -o $@
 	$(CC) -MM $(CFLAGS)  $< > $(BUILDDIR)$*.d
+
+.PHONY: dir
+dir:
+	mkdir -p $(BUILDDIR)
 
 -include $(DEPS)	
 

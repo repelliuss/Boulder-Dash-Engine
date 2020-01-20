@@ -25,15 +25,15 @@ DEPS = $(OBJS:.o=.d)
 EXEC := BoulderDash
 
 #Recipe
-$(EXEC): $(OBJS)
+.PHONY: $(BUILDDIR)
+$(EXEC): $(BUILDDIR) $(OBJS)
 	$(CC) -o $@ $(OBJS) $(LDFLAGS)
 
-$(BUILDDIR)%.o: $(SRCDIR)%.c dir
+$(BUILDDIR)%.o: $(SRCDIR)%.c
 	$(CC) -c $(CFLAGS)  $< -o $@
 	$(CC) -MM $(CFLAGS)  $< > $(BUILDDIR)$*.d
 
-.PHONY: dir
-dir:
+$(BUILDDIR):
 	mkdir -p $(BUILDDIR)
 
 -include $(DEPS)	

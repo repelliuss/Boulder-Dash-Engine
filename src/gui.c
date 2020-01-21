@@ -231,9 +231,6 @@ void get_rects_perm(SDL_Rect *rects, const WindowInfo *const info_window) {
 	rects[RECT_PERM_DES_VOLUME].w = FONT_SIZE * 6 / 1.5;
 	rects[RECT_PERM_DES_VOLUME].h = FONT_SIZE / 1.5;
 
-	rects[RECT_PERM_DES_DEV_MODE].w = FONT_SIZE * 8 / 1.5;
-	rects[RECT_PERM_DES_DEV_MODE].h = FONT_SIZE / 1.5;
-
 	rects[RECT_PERM_DES_CAMERA_SPEED].w = FONT_SIZE * 12 / 1.5;
 	rects[RECT_PERM_DES_CAMERA_SPEED].h = FONT_SIZE / 1.5;
 
@@ -249,11 +246,8 @@ void get_rects_perm(SDL_Rect *rects, const WindowInfo *const info_window) {
 	rects[RECT_PERM_DES_VOLUME].x = rects[RECT_PERM_DES_WINDOW_MODE].x;
 	rects[RECT_PERM_DES_VOLUME].y = rects[RECT_PERM_DES_WINDOW_MODE].y + rects[RECT_PERM_DES_WINDOW_MODE].h + 50;
 
-	rects[RECT_PERM_DES_DEV_MODE].x = rects[RECT_PERM_DES_VOLUME].x;
-	rects[RECT_PERM_DES_DEV_MODE].y = rects[RECT_PERM_DES_VOLUME].y + rects[RECT_PERM_DES_VOLUME].h + 50;
-
-	rects[RECT_PERM_DES_CAMERA_SPEED].x = rects[RECT_PERM_DES_DEV_MODE].x;
-	rects[RECT_PERM_DES_CAMERA_SPEED].y = rects[RECT_PERM_DES_DEV_MODE].y + rects[RECT_PERM_DES_DEV_MODE].h + 50;
+	rects[RECT_PERM_DES_CAMERA_SPEED].x = rects[RECT_PERM_DES_VOLUME].x;
+	rects[RECT_PERM_DES_CAMERA_SPEED].y = rects[RECT_PERM_DES_VOLUME].y + rects[RECT_PERM_DES_VOLUME].h + 50;
 
 	rects[RECT_PERM_DES_FPS_LOCK_VAL].w = FONT_SIZE * 3 / 1.5;
 	rects[RECT_PERM_DES_FPS_LOCK_VAL].h = FONT_SIZE / 1.5;
@@ -275,15 +269,10 @@ void get_rects_perm(SDL_Rect *rects, const WindowInfo *const info_window) {
 	rects[RECT_PERM_DES_VOLUME_VAL].x = rects[RECT_PERM_DES_WINDOW_MODE_VAL].x;
 	rects[RECT_PERM_DES_VOLUME_VAL].y = rects[RECT_PERM_DES_WINDOW_MODE_VAL].y + rects[RECT_PERM_DES_WINDOW_MODE_VAL].h + 50;
 
-	rects[RECT_PERM_DES_DEV_MODE_VAL].w = FONT_SIZE * 3 / 1.5;
-	rects[RECT_PERM_DES_DEV_MODE_VAL].h = FONT_SIZE / 1.5;
-	rects[RECT_PERM_DES_DEV_MODE_VAL].x = rects[RECT_PERM_DES_VOLUME_VAL].x;
-	rects[RECT_PERM_DES_DEV_MODE_VAL].y = rects[RECT_PERM_DES_VOLUME_VAL].y + rects[RECT_PERM_DES_VOLUME_VAL].h + 50;
-
 	rects[RECT_PERM_DES_CAMERA_SPEED_VAL].w = FONT_SIZE * 3 / 1.5;
 	rects[RECT_PERM_DES_CAMERA_SPEED_VAL].h = FONT_SIZE / 1.5;
-	rects[RECT_PERM_DES_CAMERA_SPEED_VAL].x = rects[RECT_PERM_DES_DEV_MODE_VAL].x;
-	rects[RECT_PERM_DES_CAMERA_SPEED_VAL].y = rects[RECT_PERM_DES_DEV_MODE_VAL].y + rects[RECT_PERM_DES_DEV_MODE_VAL].h + 50;
+	rects[RECT_PERM_DES_CAMERA_SPEED_VAL].x = rects[RECT_PERM_DES_VOLUME_VAL].x;
+	rects[RECT_PERM_DES_CAMERA_SPEED_VAL].y = rects[RECT_PERM_DES_VOLUME_VAL].y + rects[RECT_PERM_DES_VOLUME_VAL].h + 50;
 
 	rects[RECT_PERM_SRC_ARROW_LEFT].w = 17;
 	rects[RECT_PERM_SRC_ARROW_LEFT].h = 14;
@@ -530,11 +519,8 @@ void update_perm_rects(SDL_Rect *perm_rects, const WindowInfo *const info_window
 	perm_rects[RECT_PERM_DES_VOLUME].x = perm_rects[RECT_PERM_DES_WINDOW_MODE].x;
 	perm_rects[RECT_PERM_DES_VOLUME].y = perm_rects[RECT_PERM_DES_WINDOW_MODE].y + perm_rects[RECT_PERM_DES_WINDOW_MODE].h + 50;
 
-	perm_rects[RECT_PERM_DES_DEV_MODE].x = perm_rects[RECT_PERM_DES_VOLUME].x;
-	perm_rects[RECT_PERM_DES_DEV_MODE].y = perm_rects[RECT_PERM_DES_VOLUME].y + perm_rects[RECT_PERM_DES_VOLUME].h + 50;
-
-	perm_rects[RECT_PERM_DES_CAMERA_SPEED].x = perm_rects[RECT_PERM_DES_DEV_MODE].x;
-	perm_rects[RECT_PERM_DES_CAMERA_SPEED].y = perm_rects[RECT_PERM_DES_DEV_MODE].y + perm_rects[RECT_PERM_DES_DEV_MODE].h + 50;
+	perm_rects[RECT_PERM_DES_CAMERA_SPEED].x = perm_rects[RECT_PERM_DES_VOLUME].x;
+	perm_rects[RECT_PERM_DES_CAMERA_SPEED].y = perm_rects[RECT_PERM_DES_VOLUME].y + perm_rects[RECT_PERM_DES_VOLUME].h + 50;
 
 	perm_rects[RECT_PERM_DES_FPS_LOCK_VAL].x = perm_rects[RECT_PERM_DES_FPS_LOCK].x + perm_rects[RECT_PERM_DES_FPS_LOCK].w + 500;
 	perm_rects[RECT_PERM_DES_FPS_LOCK_VAL].y = perm_rects[RECT_PERM_DES_FPS_LOCK].y;
@@ -548,11 +534,8 @@ void update_perm_rects(SDL_Rect *perm_rects, const WindowInfo *const info_window
 	perm_rects[RECT_PERM_DES_VOLUME_VAL].x = perm_rects[RECT_PERM_DES_WINDOW_MODE_VAL].x;
 	perm_rects[RECT_PERM_DES_VOLUME_VAL].y = perm_rects[RECT_PERM_DES_WINDOW_MODE_VAL].y + perm_rects[RECT_PERM_DES_WINDOW_MODE_VAL].h + 50;
 
-	perm_rects[RECT_PERM_DES_DEV_MODE_VAL].x = perm_rects[RECT_PERM_DES_VOLUME_VAL].x;
-	perm_rects[RECT_PERM_DES_DEV_MODE_VAL].y = perm_rects[RECT_PERM_DES_VOLUME_VAL].y + perm_rects[RECT_PERM_DES_VOLUME_VAL].h + 50;
-
-	perm_rects[RECT_PERM_DES_CAMERA_SPEED_VAL].x = perm_rects[RECT_PERM_DES_DEV_MODE_VAL].x;
-	perm_rects[RECT_PERM_DES_CAMERA_SPEED_VAL].y = perm_rects[RECT_PERM_DES_DEV_MODE_VAL].y + perm_rects[RECT_PERM_DES_DEV_MODE_VAL].h + 50;
+	perm_rects[RECT_PERM_DES_CAMERA_SPEED_VAL].x = perm_rects[RECT_PERM_DES_VOLUME_VAL].x;
+	perm_rects[RECT_PERM_DES_CAMERA_SPEED_VAL].y = perm_rects[RECT_PERM_DES_VOLUME_VAL].y + perm_rects[RECT_PERM_DES_VOLUME_VAL].h + 50;
 
 
 	/*VOLUME SETTINGS*/
@@ -1407,9 +1390,6 @@ void open_settings(Game *const game) {
 		SDL_RenderCopy(game->video.renderer, game->video.perm_textures.textures[TEXTURE_PERM_VOLUME],
 						NULL, &(game->video.perm_textures.rects[RECT_PERM_DES_VOLUME]));
 
-		SDL_RenderCopy(game->video.renderer, game->video.perm_textures.textures[TEXTURE_PERM_DEV_MODE],
-						NULL, &(game->video.perm_textures.rects[RECT_PERM_DES_DEV_MODE]));
-
 		SDL_RenderCopy(game->video.renderer, game->video.perm_textures.textures[TEXTURE_PERM_CAMERA_SPEED],
 						NULL, &(game->video.perm_textures.rects[RECT_PERM_DES_CAMERA_SPEED]));
 
@@ -1446,7 +1426,7 @@ void open_settings(Game *const game) {
 				}
 			}
 			else if(is_pressed(&(game->input.keyboard), KEY_DOWN) || is_pressed(&(game->input.keyboard), KEY_S)) {
-				if(layer_place + 1 < 6) {
+				if(layer_place + 1 < 5) {
 					play_chunk(game->audio.sfx[AUDIO_SFX_LEVEL_SCREEN_MOVE].chunk, game->audio.sfx[AUDIO_SFX_LEVEL_SCREEN_MOVE].channel, 0);
 					set_chunk_volume(game->audio.sfx[AUDIO_SFX_LEVEL_SCREEN_MOVE].chunk, game->audio.vol_sfx);
 					game->input.key = KEY_UP;
@@ -1470,14 +1450,6 @@ void open_settings(Game *const game) {
 					if(old_mode != game->screen.info_window.mode) {
 						game->settings.window.should_change = TRUE;
 						handle_window_mode(game);
-					}
-				}
-				else if(layer_place == 4) {
-					if(old_situation == FALSE && game->settings.dev_mode.is_on == TRUE) {
-						game->settings.dev_mode.is_saved = FALSE;
-					}
-					else if(old_situation == TRUE && game->settings.dev_mode.is_on == FALSE) {
-						game->settings.dev_mode.is_loaded = FALSE;	
 					}
 				}
 			}
@@ -1534,13 +1506,6 @@ void set_settings_layer(SDL_Rect *const des, const int layer_place, SDL_Rect *co
 			break;
 
 		case 4:
-			des->w = rects[RECT_PERM_DES_DEV_MODE].w + width;
-			des->h = rects[RECT_PERM_DES_DEV_MODE].h + height;
-			des->x = rects[RECT_PERM_DES_DEV_MODE].x - width / 2;
-			des->y = rects[RECT_PERM_DES_DEV_MODE].y - height / 2;
-			break;
-
-		case 5:
 			des->w = rects[RECT_PERM_DES_CAMERA_SPEED].w + width;
 			des->h = rects[RECT_PERM_DES_CAMERA_SPEED].h + height;
 			des->x = rects[RECT_PERM_DES_CAMERA_SPEED].x - width / 2;
@@ -1584,14 +1549,6 @@ void set_settings_arrows(SDL_Rect *const des_left, SDL_Rect *const des_right, co
 			break;
 
 		case 4:
-			des_right->x = rects[RECT_PERM_DES_DEV_MODE_VAL].x - des_right->w - 10;
-			des_right->y = rects[RECT_PERM_DES_DEV_MODE_VAL].y + (rects[RECT_PERM_DES_DEV_MODE_VAL].h / 2) - (des_right->h / 2);
-
-			des_left->x = rects[RECT_PERM_DES_DEV_MODE_VAL].x + rects[RECT_PERM_DES_DEV_MODE_VAL].w + 10;
-			des_left->y = rects[RECT_PERM_DES_DEV_MODE_VAL].y + (rects[RECT_PERM_DES_DEV_MODE_VAL].h / 2) - (des_left->h / 2);
-			break;
-
-		case 5:
 			des_right->x = rects[RECT_PERM_DES_CAMERA_SPEED_VAL].x - des_right->w - 10;
 			des_right->y = rects[RECT_PERM_DES_CAMERA_SPEED_VAL].y + (rects[RECT_PERM_DES_CAMERA_SPEED_VAL].h / 2) - (des_right->h / 2);
 
@@ -1615,9 +1572,6 @@ void set_old_values(Game *const game, const int layer_place, bool *old_situation
 			(*old_mode) = game->screen.info_window.mode;
 			break;
 		case 4:
-			(*old_situation) = game->settings.dev_mode.is_on;
-			break;
-		case 5:
 			(*old_value) = (int)(game->screen.camera.speed * 100);
 			break;
 	}
@@ -1720,14 +1674,6 @@ void update_settings(Game *const game, const Key key, const int layer_place) {
 			}
 			break;
 		case 4:
-			if(game->settings.dev_mode.is_on == TRUE) {
-				game->settings.dev_mode.is_on = FALSE;
-			}
-			else {
-				game->settings.dev_mode.is_on = TRUE;
-			}
-			break;
-		case 5:
 			switch((int)(game->screen.camera.speed * 100)) {
 				case 100:
 					if(key == KEY_LEFT) game->screen.camera.speed = 0.9;

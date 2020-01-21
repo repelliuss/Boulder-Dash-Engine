@@ -202,8 +202,6 @@ void load_textures_perm(SDL_Texture **textures, SDL_Renderer *renderer, TTF_Font
 
 	textures[TEXTURE_PERM_VOLUME] = get_text(renderer, fonts[FONT_MENU], "VOLUME", &white);
 
-	textures[TEXTURE_PERM_DEV_MODE] = get_text(renderer, fonts[FONT_MENU], "DEV MODE", &white);
-
 	textures[TEXTURE_PERM_ON] = get_text(renderer, fonts[FONT_MENU], "ON", &white);
 
 	textures[TEXTURE_PERM_OFF] = get_text(renderer, fonts[FONT_MENU], "OFF", &white);
@@ -393,15 +391,6 @@ void render_settings_val(Game *const game) {
 			SDL_RenderCopy(game->video.renderer, game->video.perm_textures.textures[TEXTURE_PERM_FULLSCREEN],
 						NULL, &(game->video.perm_textures.rects[RECT_PERM_DES_WINDOW_MODE_VAL]));
 			break;
-	}
-
-	if(game->settings.dev_mode.is_on == FALSE) {
-		SDL_RenderCopy(game->video.renderer, game->video.perm_textures.textures[TEXTURE_PERM_OFF],
-						NULL, &(game->video.perm_textures.rects[RECT_PERM_DES_DEV_MODE_VAL]));
-	}
-	else {
-		SDL_RenderCopy(game->video.renderer, game->video.perm_textures.textures[TEXTURE_PERM_ON],
-						NULL, &(game->video.perm_textures.rects[RECT_PERM_DES_DEV_MODE_VAL]));	
 	}
 
 	switch((int)(game->screen.camera.speed * 100)) {

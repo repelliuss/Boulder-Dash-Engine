@@ -38,7 +38,7 @@ int load_game(SDL_Window *window, SDL_Renderer *renderer) {
 				show_text_timed_screen(game, game->video.perm_textures.textures[TEXTURE_PERM_LOSE], &game->video.perm_textures.rects[RECT_PERM_DES_LOSE], 3.0);
 			}
 
-			game_restart = open_are_you_sure(game, game->video.perm_textures.textures[RECT_PERM_DES_GAME_RESTART], &game->video.perm_textures.rects[RECT_PERM_DES_GAME_RESTART], FALSE);
+			game_restart = open_are_you_sure(game, game->video.perm_textures.textures[TEXTURE_PERM_GAME_RESTART], &game->video.perm_textures.rects[RECT_PERM_DES_GAME_RESTART], FALSE);
 		}
 
 		free_game(&game);

@@ -11,7 +11,7 @@ BUILDDIR := build/
 CFLAGS := -Iinclude -O0
 
 #LIBRARY FLAGS
-LDFLAGS := -Wl,--disable-new-dtags,-rpath=./lib/ -L./lib/ -ltinfo -lreadline -lpng16 -lwebp -lSDL2 -lSDL2_image-2.0 -lSDL2_image -lSDL2_ttf -lSDL2_mixer-2.0 -lSDL2_mixer
+LDFLAGS := -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
 
 #Finding Source Files
 SRCS := $(wildcard $(SRCDIR)*.c)

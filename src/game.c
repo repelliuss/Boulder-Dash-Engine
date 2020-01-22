@@ -282,23 +282,23 @@ void handle_dev_mode(Game *const game) {
 
 void handle_window_mode(Game *const game) {
 
-	SDL_DisplayMode dp_mode;
+	int w, h;
 
 	if(game->settings.window.should_change == TRUE) {
 		switch(game->screen.info_window.mode) {
 			case WINDOW_MODE_WINDOWED:
 				SDL_SetWindowFullscreen(game->screen.window, 0);
 				SDL_SetWindowBordered(game->screen.window, SDL_TRUE);
-				SDL_GetCurrentDisplayMode(SDL_GetWindowDisplayIndex(game->screen.window), &dp_mode);
-				SDL_SetWindowSize(game->screen.window, dp_mode.w - 100, dp_mode.h - 100);
+				SDL_GetWindowMaximumSize(game->screen.window, &w, &h);
+				SDL_SetWindowSize(game->screen.window, w, h);
+				SDL_SetWindowPosition(game->screen.window, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED);
 				SDL_ShowCursor(SDL_ENABLE);
 				break;
 			case WINDOW_MODE_BORDERLESS:
 				SDL_SetWindowFullscreen(game->screen.window, 0);
-				SDL_RestoreWindow(game->screen.window);
-				SDL_GetCurrentDisplayMode(SDL_GetWindowDisplayIndex(game->screen.window), &dp_mode);
-				SDL_SetWindowSize(game->screen.window, dp_mode.w, dp_mode.h);
 				SDL_SetWindowBordered(game->screen.window, SDL_FALSE);
+				SDL_GetWindowMaximumSize(game->screen.window, &w, &h);
+				SDL_SetWindowMaximumSize(game->screen.window, w, h);
 				SDL_ShowCursor(SDL_ENABLE);
 				break;
 			case WINDOW_MODE_FULLSCREEN:

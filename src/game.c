@@ -289,6 +289,8 @@ void handle_window_mode(Game *const game) {
 			case WINDOW_MODE_WINDOWED:
 				SDL_SetWindowFullscreen(game->screen.window, 0);
 				SDL_SetWindowBordered(game->screen.window, SDL_TRUE);
+				SDL_GetCurrentDisplayMode(SDL_GetWindowDisplayIndex(game->screen.window), &dp_mode);
+				SDL_SetWindowSize(game->screen.window, dp_mode.w - 100, dp_mode.h - 100);
 				SDL_ShowCursor(SDL_ENABLE);
 				break;
 			case WINDOW_MODE_BORDERLESS:

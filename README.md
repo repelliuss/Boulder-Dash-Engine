@@ -18,7 +18,7 @@
 * [Compile Yourself](#compile-yourself)
 
 ## General Info
-&nbsp;&nbsp;&nbsp;&nbsp;A free imitation of the NES game Boulder Dash with additional features and unique levels written in C. It was a university project at the beginning but instructions were simple. Then i went further and created this.
+&nbsp;&nbsp;&nbsp;&nbsp;A free remake of the NES game Boulder Dash with additional features and unique levels written in C. It was a university project at the beginning but instructions were simple. Then i went further and created this.
 
 &nbsp;&nbsp;&nbsp;&nbsp;I do not own any rights about Boulder Dash brand. All rights are reserved, as are trademarks of their respective owners.
 

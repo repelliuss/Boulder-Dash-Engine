@@ -79,4 +79,4 @@
 &nbsp;&nbsp;&nbsp;&nbsp; All of these assets belongs to the original Boulder Dash NES.
 
 ### Others
-&nbsp;&nbsp;&nbsp;&nbsp; Source code and other assets are licensed put under [MIT](LICENSE) by [repelliuss](https://github.com/repelliuss).  
+&nbsp;&nbsp;&nbsp;&nbsp; All of the source code and other assets are put under [MIT](LICENSE) license by [repelliuss](https://github.com/repelliuss).  

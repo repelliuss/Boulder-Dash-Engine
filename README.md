@@ -16,6 +16,7 @@
 * [Libraries](#libraries)
 * [Installation](#installation)
 * [Compile Yourself](#compile-yourself)
+* [Licensing](#licensing)
 
 ## General Info
 &nbsp;&nbsp;&nbsp;&nbsp;A free remake of the NES game Boulder Dash with additional features and unique levels written in C. It was a university project at the beginning but instructions were simple. Then i went further and created this.
@@ -30,7 +31,7 @@
 <p align="center"><img src="https://b.allthepics.net/Pyramid.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://b.allthepics.net/WaterClan.png" width="302" height="180" /></p>
 
 ## Features
-* 10 Levels
+* 10 Unique Levels, inspired by the original
 * 6 Worlds
 * 4 Difficulty
 * Save and Load
@@ -64,3 +65,18 @@
   ```
 ### Windows
 * Please get [libraries](#libraries) and configure it yourself for your environment.
+
+## Licensing
+### SFX
+* step_dirt is made by [TinyWorlds](https://opengameart.org/users/tinyworlds) which is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+* gate_open is from [NES Sounds](https://opengameart.org/content/nes-sounds), made by [Baŝto](https://opengameart.org/users/ba%C5%9Dto) which is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+* diamond_created and stone_fall are from [Diamond Digger Saga](https://www.sounds-resource.com/mobile/diamonddiggersaga/).
+* diamond_fell, diamond_pick, life_up, and level_screen_move are obtained from [ZAPSPLAT](https://www.zapsplat.com).
+* game_win, game_lose, level_win, level_lose and screen_select made by [Little Robot Sound Factory](https://www.zapsplat.com/author/little-robot-sound-factory/) which is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+* I lost the source of stone_fell. Contact me if you know.
+
+### Music and Textures
+&nbsp;&nbsp;&nbsp;&nbsp; All of these assets belongs to the original Boulder Dash NES.
+
+### Others
+&nbsp;&nbsp;&nbsp;&nbsp; Source code and other assets are licensed put under [MIT](LICENSE) by [repelliuss](https://github.com/repelliuss).  

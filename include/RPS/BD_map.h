@@ -1,5 +1,5 @@
-#ifndef BD_LEVELS_H
-#define BD_LEVELS_H
+#ifndef BD_MAP_H
+#define BD_MAP_H
 	
 	typedef enum tileSpecs {
 		TILE_WIDTH = 64,

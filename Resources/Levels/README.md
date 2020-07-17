@@ -21,7 +21,7 @@
 * levelX_tileset.png is consisting from tiles with their different frames. World
   5 has a different color key. level8 and level9 is in World 5. If you want to
   change color keys of levels go to the `get_color_key` function in
-  `src/level.c` and modify it. I put a 2 templates representing how should you put
+  `src/level.c`, modify and recompile it. I put a 2 templates representing how should you put
   your textures but in a blurred way because of legal problems. I also put an
   blurred_info_tileset.png to make it explicit what this tile is. Tiles below the info text are
   animation frames of that tile which is represented by the info text.

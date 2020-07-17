@@ -52,6 +52,7 @@ This is a demonstration and it just represents the original game assets loaded t
 ## How to Get
 * If you want to get *Boulder Dash 2020* on Windows or Linux:
   * [Please click here for further instructions!](https://github.com/repelliuss/Boulder-Dash-Engine/releases/latest)
+* Don't forget to see [Making it Playable!](#making-it-playable)
 
 ## Making it Playable
 Go to the README files at those locations and follow the instructions in them!

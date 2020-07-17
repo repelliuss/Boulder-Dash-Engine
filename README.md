@@ -89,7 +89,6 @@ You can modify:
 ### SFX
 * step_dirt is made by [TinyWorlds](https://opengameart.org/users/tinyworlds) which is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
 * gate_open and foe_kill are from [NES Sounds](https://opengameart.org/content/nes-sounds), made by [Baŝto](https://opengameart.org/users/ba%C5%9Dto) which is licensed under [CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-* diamond_created and stone_fall are from [Diamond Digger Saga](https://www.sounds-resource.com/mobile/diamonddiggersaga/).
 * diamond_fell, diamond_pick, life_up, and level_screen_move are obtained from [ZAPSPLAT](https://www.zapsplat.com).
 * game_win, game_lose, level_win, level_lose and screen_select made by [Little Robot Sound Factory](https://www.zapsplat.com/author/little-robot-sound-factory/) which is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 * I lost the source of stone_fell. Contact me if you know.

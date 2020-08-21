@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="200" height="200" src="https://b.allthepics.net/rpsLogo.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="250" src="https://b.allthepics.net/Screenshot_1.png">
+  <img width="200" height="200" src="https://i.imgur.com/VOIqPTP.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="250" src="https://i.imgur.com/5lj70MR.jpg">
 </p>
 
 # Boulder Dash Engine
@@ -29,8 +29,8 @@
 This is a demonstration and it just represents the original game assets loaded to engine. [Check out it here!](https://www.youtube.com/watch?v=pzB-JUV8MwU)
 
 ## Screenshots
-<p align="center"><img src="https://b.allthepics.net/Hourglass.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://b.allthepics.net/Waterquake.png" width="302" height="180" /></p>
-<p align="center"><img src="https://b.allthepics.net/Pyramid.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://b.allthepics.net/WaterClan.png" width="302" height="180" /></p>
+<p align="center"><img src="https://i.imgur.com/yN0BjEL.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/RHpY6me.png" width="302" height="180" /></p>
+<p align="center"><img src="https://i.imgur.com/P9zhqmD.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/7kXVfp2.png" width="302" height="180" /></p>
 <p align="center"> These screensots represent a demonstration with the original game assets loaded. </p>
 
 ## Features

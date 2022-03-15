@@ -1,37 +1,27 @@
-<p align="center">
-  <img width="200" height="200" src="https://i.imgur.com/VOIqPTP.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="200" height="250" src="https://i.imgur.com/5lj70MR.jpg">
-</p>
 
-# Boulder Dash Engine
-> An engine for Boulder Dash
+<p align="center"><i>Boulder Dash Engine</i></p>
 
 [<p align="center"><img src="https://media.giphy.com/media/eiXobdfN1XFTSwGI1s/giphy-downsized-large.gif" width="470" height="280" /></p>](https://www.youtube.com/watch?v=pzB-JUV8MwU)
-<p align="center"> <i>Click on the GIF to see the Demonstration Video</i> </p>
+<p align="center">Click on the GIF to watch demo!</p>
 
-## Table of Contents
-* [General Info](#general-info)
-* [Demonstration Video](#demonstration-video)
-* [Screenshots](#screenshots)
-* [Features](#features)
-* [Libraries](#libraries)
-* [How to Get](#how-to-get)
-* [Making it Playable](#making-it-playable)
-* [Modding](#modding)
-* [Compile Yourself](#compile-yourself)
-* [Licensing](#licensing)
+⠀
+##
+⠀
 
-## General Info
+<p align="center"><img src="https://i.imgur.com/yN0BjEL.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/RHpY6me.png" width="302" height="180" /></p>
+
+<p align="center"><img src="https://i.imgur.com/P9zhqmD.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/7kXVfp2.png" width="302" height="180" /></p>
+
+<p align="center"> These screensots represent a demonstration with the original game assets loaded. </p>
+
+⠀
+##
+⠀
+
+## About
 &nbsp;&nbsp;&nbsp;&nbsp;An engine for Boulder Dash that lets you make your own Boulder Dash. **This is not a play-ready project.** You need to have your own textures and music put for legal reasons. I just serve an engine, my own levels and some free assets ready.
 
 &nbsp;&nbsp;&nbsp;&nbsp;I do not own any rights about Boulder Dash brand. All rights are reserved, as are trademarks of their respective owners. You can learn about [the original owners of the Boulder Dash brand here.](https://firststarsoftware.com/) 
-
-## Demonstration Video
-This is a demonstration and it just represents the original game assets loaded to engine. [Check out it here!](https://www.youtube.com/watch?v=pzB-JUV8MwU)
-
-## Screenshots
-<p align="center"><img src="https://i.imgur.com/yN0BjEL.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/RHpY6me.png" width="302" height="180" /></p>
-<p align="center"><img src="https://i.imgur.com/P9zhqmD.png" width="302" height="180" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://i.imgur.com/7kXVfp2.png" width="302" height="180" /></p>
-<p align="center"> These screensots represent a demonstration with the original game assets loaded. </p>
 
 ## Features
 * 10 Possible Level
@@ -69,7 +59,7 @@ You can modify:
 * Textures
 * and of course engine itself!
 
-## Compile Yourself
+## Compiling
 ### Linux
 #### Dependencies
 * For **Ubuntu**:
